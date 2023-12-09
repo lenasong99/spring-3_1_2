@@ -11,17 +11,21 @@
   <table>
     <thead>
     <tr>
+      <th>Name</th>
+      <th>Surname</th>
+      <th>Age</th>
       <th>Username</th>
       <th>Password</th>
-      <th>Email</th>
       <th>Operations</th>
     </tr>
     </thead>
     <tbody>
     <tr th:each="user : ${allUsers}">
+      <td th:text="${user.name}"/>
+      <td th:text="${user.surname}"/>
+      <td th:text="${user.age}"/>
       <td th:text="${user.username}"/>
       <td th:text="${user.password}"/>
-      <td th:text="${user.email}"/>
       <td><a th:href="'admin/edit-user?id='+${user.id}">Edit</a></td>
       <td><a th:href="'admin/delete-user?id='+${user.id}">Delete</a></td>
 

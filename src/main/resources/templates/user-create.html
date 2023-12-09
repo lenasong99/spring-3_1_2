@@ -8,14 +8,20 @@
 <body>
 <h2>Create new User</h2>
 <form method="post" th:action="@{/admin/new}" th:object="${user}">
+  <label for="name">Name</label>
+  <input type="text" th:field="*{name}" id = "name" placeholder="username">
+  <p></p>
+  <label for="surname">Surname</label>
+  <input type="text" th:field="*{surname}" id = "surname" placeholder="surname">
+  <p></p>
+  <label for="age">Age</label>
+  <input type="text" th:field="*{age}" id = "age" placeholder="age">
+  <p></p>
   <label for="username">Username</label>
-  <input type="text" th:field="*{username}" id = "username" placeholder="username">
+  <input type="text" th:field="*{username}" id="username" placeholder="username">
   <p></p>
   <label for="password">Password</label>
-  <input type="text" th:field="*{password}" id = "password" placeholder="password">
-  <p></p>
-  <label for="email">Email</label>
-  <input type="text" th:field="*{email}" id = "email" placeholder="email">
+  <input type="text" th:field="*{password}" id="password" placeholder="password">
   <p></p>
   <label>
     <select size="3" name="role" id="roles" multiple="multiple">
